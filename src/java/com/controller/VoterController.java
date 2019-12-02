@@ -1,44 +1,35 @@
 package com.controller;
 
+import com.dao.CandidateDao;
 import com.dao.VoteDao;
 import com.model.Candidate;
 import com.model.Election;
-import com.model.Party;
 import com.model.User;
 import com.model.Vote;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class VoterController {
     
     @RequestMapping("/addvote")
-    public String addVote(Model model)
+    public String addVote(Model model) throws SQLException
     {
         User user = new User("Dora", "Vondee", "dora", "1234", "voter");
         user.setId(1);
+//        UserDao userdao = new UserDao();
+//        List<User> user = userdao.getUser();
+        
         Election e = new Election("General", 2019);
         e.setId(2);
-        Candidate g = new Candidate();
-        g.setId(1);
-        g.setName("Gilbert");
-        g.setParty(new Party("NPP"));
         
-        Candidate s = new Candidate();
-        s.setId(2);
-        s.setName("Sam");
-        s.setParty(new Party("PPP"));
-        
-        List<Candidate> candidates = new ArrayList<>();
-        candidates.add(s);
-        candidates.add(g);
-        
+        CandidateDao candidatedao = new CandidateDao();
+        List<Candidate> candidates = candidatedao.getCandidate();
+   
         model.addAttribute("user", user);
         model.addAttribute("election", e);
         model.addAttribute("candidates", candidates);
