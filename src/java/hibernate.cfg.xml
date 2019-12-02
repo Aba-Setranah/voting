@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/evoting?zeroDateTimeBehavior=convertToNull</property>
+    <property name="hibernate.connection.username">root</property>
+    <mapping class="com.model.User"/>
+    <mapping class="com.model.Candidate"/>
+    <mapping class="com.model.Party"/>
+    <mapping class="com.model.Vote"/>
+    <mapping class="com.model.Voterelection"/>
+    <mapping class="com.model.Election"/>
+    <mapping class="com.model.Category"/>
+    <mapping class="com.model.Constituency"/>
+  </session-factory>
+</hibernate-configuration>

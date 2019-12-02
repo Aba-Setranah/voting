@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="evoting"/>
+  <table-filter match-name="voterelection"/>
+  <table-filter match-name="constituency"/>
+  <table-filter match-name="user"/>
+  <table-filter match-name="candidate"/>
+  <table-filter match-name="vote"/>
+  <table-filter match-name="election"/>
+  <table-filter match-name="category"/>
+  <table-filter match-name="party"/>
+</hibernate-reverse-engineering>
