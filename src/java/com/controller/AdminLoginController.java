@@ -5,16 +5,19 @@
  */
 package com.controller;
 
+import com.dao.VoteDao;
+import java.sql.SQLException;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class AdminLoginController {
-    
+
     @RequestMapping("/adminhome")
-    public String adminhome()
-    {
-        
+    public String adminhome(Model model) throws SQLException {
+        model.addAttribute("votes", new VoteDao().getAllVotes());
+
         return "adminhome";
     }
 }

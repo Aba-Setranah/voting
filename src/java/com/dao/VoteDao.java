@@ -7,6 +7,7 @@ package com.dao;
 
 import com.model.ElectionVote;
 import com.model.Vote;
+import com.model.Voterelection;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -46,5 +47,18 @@ public class VoteDao {
         }
         ps.close();
         return electionVotes;
+    }
+
+    public int addelectionvote(Voterelection ve) throws SQLException {
+        
+        Connection c = new VoteConnection().getConnection();
+
+        PreparedStatement ps = c.prepareStatement("insert into voterelection(election_id, voter_id) values(?,?)");
+        ps.setInt(1, ve.getElectionId());
+        ps.setInt(2, ve.getVoterId());
+
+        int x = ps.executeUpdate();
+        ps.close();
+        return x;
     }
 }
