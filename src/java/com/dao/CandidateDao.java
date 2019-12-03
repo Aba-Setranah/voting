@@ -24,7 +24,15 @@ import org.springframework.jdbc.core.RowMapper;
  */
 public class CandidateDao {
     
-    JdbcTemplate jdbc;
+    JdbcTemplate connection;
+
+    public JdbcTemplate getConnection() {
+        return connection;
+    }
+
+    public void setConnection(JdbcTemplate connection) {
+        this.connection = connection;
+    }   
     
     public List<Candidate> getCandidate() throws SQLException {
         List<Candidate> candidates = new ArrayList<>();
@@ -60,16 +68,17 @@ public class CandidateDao {
 //    }
      
     public void setJdcb(JdbcTemplate jdbc){
-       this.jdbc = jdbc;
+       this.connection = jdbc;
     }
     
     public int save(Candidate ca){
-        String sql="insert into candidate(name,party_id) values('"+ca.getName()+"',"+ca.getParty().getId()+")";
-        return jdbc.update(sql);
+        byte[] b= "".getBytes();
+        String sql="insert into candidate(name,party_id,image) values('"+ca.getName()+"',"+1+",'"+b+"')";
+        return connection.update(sql);
     }
     
     public List<Candidate> viewAll(){
-        return jdbc.query("select * from candidate", new RowMapper <Candidate>(){
+        return connection.query("select * from candidate", new RowMapper <Candidate>(){
         @Override
         public Candidate mapRow(ResultSet rs, int row)throws SQLException{
             Candidate ca= new Candidate();

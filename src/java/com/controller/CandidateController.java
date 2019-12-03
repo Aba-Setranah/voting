@@ -6,15 +6,11 @@
 package com.controller;
 
 import com.dao.CandidateDao;
-import com.dao.UserDao;
 import com.model.Candidate;
-import static com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type.Int;
 import java.sql.SQLException;
 import java.util.List;
-import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.request;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -37,7 +33,7 @@ public class CandidateController {
         return "redirect:/viewCandidate";
     }
     
-    @RequestMapping(value="/viewCandidat")
+    @RequestMapping(value="/viewCandidate")
         public String viewCandidate(Model m) throws SQLException{
             List <Candidate> list= c.getCandidate();
             m.addAttribute("list", list);

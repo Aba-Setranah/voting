@@ -13,7 +13,7 @@
     </head>
     <body>
         <h1>Add Candidate</h1>
-        <form action="addCandidateAction">
+        <form action="addCandidateAction" method="post">
             Name <input type="text" name="name"/><br><br>
             Party_id <input type="text" name="party"/><br><br>
             <input type="submit" value="ADD">
