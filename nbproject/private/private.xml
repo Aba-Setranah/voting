@@ -3,12 +3,22 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/MundiaG/Documents/NetBeansProjects/voting/web/WEB-INF/jsp/voterloginpage.jsp</file>
             <file>file:/C:/Users/MundiaG/Documents/NetBeansProjects/voting/web/WEB-INF/jsp/fragment/footer.jsp</file>
-            <file>file:/C:/Users/MundiaG/Documents/NetBeansProjects/voting/web/WEB-INF/jsp/fragment/header.jsp</file>
+            <file>file:/C:/Users/MundiaG/Documents/NetBeansProjects/voting/src/java/com/controller/VoterController.java</file>
+            <file>file:/C:/Users/MundiaG/Documents/NetBeansProjects/voting/web/WEB-INF/applicationContext.xml</file>
+            <file>file:/C:/Users/MundiaG/Documents/NetBeansProjects/voting/web/WEB-INF/jsp/index.jsp</file>
+            <file>file:/C:/Users/MundiaG/Documents/NetBeansProjects/voting/web/build/config/rollup.config.js</file>
+            <file>file:/C:/Users/MundiaG/Documents/NetBeansProjects/voting/web/WEB-INF/jsp/addvote.jsp</file>
             <file>file:/C:/Users/MundiaG/Documents/NetBeansProjects/voting/web/WEB-INF/jsp/fragment/required.jsp</file>
+            <file>file:/C:/Users/MundiaG/Documents/NetBeansProjects/voting/web/WEB-INF/jsp/fragment/header.jsp</file>
             <file>file:/C:/Users/MundiaG/Documents/NetBeansProjects/voting/web/WEB-INF/jsp/viewvotes.jsp</file>
+            <file>file:/C:/Users/MundiaG/Documents/NetBeansProjects/voting/web/build/js/AdminLTE.js</file>
             <file>file:/C:/Users/MundiaG/Documents/NetBeansProjects/voting/web/WEB-INF/jsp/fragment/css.jsp</file>
+            <file>file:/C:/Users/MundiaG/Documents/NetBeansProjects/voting/web/build/scss/_bootstrap-variables.scss</file>
             <file>file:/C:/Users/MundiaG/Documents/NetBeansProjects/voting/nbproject/build-impl.xml</file>
+            <file>file:/C:/Users/MundiaG/Documents/NetBeansProjects/voting/src/java/com/dao/UserDao.java</file>
+            <file>file:/C:/Users/MundiaG/Documents/NetBeansProjects/voting/src/java/com/dao/VoteDao.java</file>
         </group>
     </open-files>
 </project-private>
