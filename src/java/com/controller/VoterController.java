@@ -71,7 +71,7 @@ public class VoterController {
         System.out.println(election);
         System.out.println(candidate);
         System.out.println(user);
-        return "redirect:/alreadyvoted";
+        return "successfullyvoted";
     }
 
     @RequestMapping("/viewvotes")
