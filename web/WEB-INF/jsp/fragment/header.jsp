@@ -32,15 +32,6 @@
 
         <!-- Sidebar -->
         <div class="sidebar">
-            <!-- Sidebar user (optional) -->
-            <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-                <div class="image">
-                    <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
-                </div>
-                <div class="info">
-                    <a href="#" class="d-block">Sam the Coder</a>
-                </div>
-            </div>
 
             <!-- Sidebar Menu Candidate -->
             <nav class="mt-2">
@@ -57,17 +48,18 @@
                         </a>
                         <ul class="nav nav-treeview" style="display: none;">
                             <li class="nav-item">
-                                <a href="./index.html" class="nav-link active">
+                                <a href="addCandidate" class="nav-link active">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Add Candidate</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="./index2.html" class="nav-link">
+                                <a href="viewCandidate" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>View Candidate</p>
                                 </a>
                             </li>
+                            
                         </ul>
                     </li>
                 </ul>
@@ -89,17 +81,18 @@
                         </a>
                         <ul class="nav nav-treeview" style="display: none;">
                             <li class="nav-item">
-                                <a href="./index.html" class="nav-link active">
+                                <a href="addCandidate" class="nav-link active">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Add Voter</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="./index2.html" class="nav-link">
+                                <a href="viewCandidate" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>View Voter</p>
                                 </a>
                             </li>
+                            
                         </ul>
                     </li>
                 </ul>
@@ -124,12 +117,6 @@
                                 <a href="./index.html" class="nav-link active">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>General Elections</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="./index2.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Parliamentary Elections</p>
                                 </a>
                             </li>
                         </ul>

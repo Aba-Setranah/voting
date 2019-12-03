@@ -13,7 +13,8 @@
         <%@include file="fragment/css.jsp" %>
     </head>
     <body class="hold-transition sidebar-mini">
-        <%@include file="fragment/header.jsp" %>
+        <%@include file="fragment/header.jsp" %> 
+        
 
 
         <form action="addvoteaction" method="post">

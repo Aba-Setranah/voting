@@ -24,5 +24,7 @@
     <property name="jdbc" ref="jdbc"/>
     
 </bean>
-
+<bean id="c"   class="com.dao.CandidateDao">
+    <property name="connection" ref="jdbc"/>
+</bean>
 </beans>
