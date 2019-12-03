@@ -9,17 +9,19 @@
        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
 
-    <!--bean id="propertyConfigurer"
-          class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"
-          p:location="/WEB-INF/jdbc.properties" />
+<bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">  
+<property name="driverClassName" value="com.mysql.jdbc.Driver" />  
+<property name="url" value="jdbc:mysql://localhost:3306/evoting" />  
+<property name="username" value="root" />  
+<property name="password" value="" />  
+</bean> 
 
-<bean id="dataSource"
-    class="org.springframework.jdbc.datasource.DriverManagerDataSource"
-    p:driverClassName="${jdbc.driverClassName}"
-    p:url="${jdbc.url}"
-    p:username="${jdbc.username}"
-    p:password="${jdbc.password}" /-->
-
-    <!-- ADD PERSISTENCE SUPPORT HERE (jpa, hibernate, etc) -->
-
+<bean id="jdbc" class="org.springframework.jdbc.core.JdbcTemplate">
+  <property name="dataSource" ref="ds"/>
+  
+</bean>
+<bean id="ud"   class="com.dao.UserDao">
+    <property name="jdbc" ref="jdbc"/>
+    
+</bean>
 </beans>
