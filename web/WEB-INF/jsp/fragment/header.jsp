@@ -65,7 +65,7 @@
                             <li class="nav-item">
                                 <a href="./index2.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>View Candidates</p>
+                                    <p>View Candidate</p>
                                 </a>
                             </li>
                             
@@ -98,7 +98,7 @@
                             <li class="nav-item">
                                 <a href="./index2.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>View Voters</p>
+                                    <p>View Voter</p>
                                 </a>
                             </li>
                             
