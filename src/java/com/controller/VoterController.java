@@ -41,7 +41,7 @@ public class VoterController {
     {
         String election = request.getParameter("election_id");
         String candidate = request.getParameter("candidate"); 
-        String user = request.getParameter("user_id");
+        int user = Integer.parseInt(request.getParameter("user_id"));
         
         Vote vote= new Vote(Integer.parseInt(election), Integer.parseInt(candidate), null);
         VoteDao voteDao= new VoteDao();

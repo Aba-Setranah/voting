@@ -22,7 +22,7 @@ public class CandidateDao {
     public List<Candidate> getCandidate() throws SQLException {
         List<Candidate> candidates = new ArrayList<>();
         Connection c = new VoteConnection().getConnection();
-
+        System.out.println("11111111111111111");
         PreparedStatement ps = c.prepareStatement("SELECT * FROM candidate");
 
         ResultSet rs = ps.executeQuery();
@@ -32,6 +32,7 @@ public class CandidateDao {
             candidate.setId(rs.getInt("id"));
             candidate.setName(rs.getString("name"));
             candidates.add(candidate);
+            System.out.println("name="+rs.getString("name"));
         }
         ps.close();
         return candidates;

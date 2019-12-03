@@ -18,6 +18,7 @@ public class VoteConnection {
     {
         try {
             Class.forName("com.mysql.jdbc.Driver");
+            System.out.println("#################");
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/evoting","root","");
             return conn;
         } catch (Exception e) {

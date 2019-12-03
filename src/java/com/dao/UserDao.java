@@ -1,34 +1,24 @@
 package com.dao;
 
 import com.model.User;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
+import org.springframework.jdbc.core.JdbcTemplate;
 
 public class UserDao {
     
-    public List<User> getUser() throws SQLException {
-        List<User> users = new ArrayList<>();
-        Connection c = new VoteConnection().getConnection();
+    JdbcTemplate jdbc;
 
-        PreparedStatement ps = c.prepareStatement("SELECT * FROM user");
-
-        ResultSet rs = ps.executeQuery();
-        while (rs.next()) {
-            User user = new User();
-            
-            user.setId(rs.getInt("id"));
-            user.setFirstname(rs.getString("firstname"));
-            user.setLastname(rs.getString("lastname"));
-            user.setPassword(rs.getString("password"));
-            user.setUsername(rs.getString("username"));
-            user.setUsertype(rs.getString("usertype"));
-            users.add(user);
-        }
-        ps.close();
-        return users;
+    public void setJdbc(JdbcTemplate jdbc) {
+        this.jdbc = jdbc;
     }
+    
+    public List checkUser(User u)
+    {
+        List <User> k=jdbc.query("select * from user where id='"+u.getId()+"' and password='"+u.getPassword()+"'",new UserRowMapper() );
+        return k;
+    }
+    
+    
+    
+   
 }
