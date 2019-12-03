@@ -32,7 +32,8 @@
             </div>
             <!-- /.login-logo -->
             <div class="card">
-                <div class="card-body login-card-body">
+                <!--div class="card-body login-card-body"-->
+                 <div class="card-body login-box">
                     <p class="login-box-msg">Login in to start your session</p>
 
                     <form action="usercheck" method="post">
@@ -40,7 +41,7 @@
                             <input type="text" name="id" class="form-control" placeholder="ID">
                             <div class="input-group-append">
                                 <div class="input-group-text">
-                                    <span class="fas fa-envelope"></span>
+                                    <span class="fas fa-id-badge"></span>
                                 </div>
                             </div>
                         </div>
