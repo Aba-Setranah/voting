@@ -20,7 +20,8 @@
   <property name="dataSource" ref="ds"/>
   
 </bean>
-<bean id="ud"   class="com.dao.UserDao">
+
+<bean id="c"   class="com.dao.CandidateDao">
     <property name="jdbc" ref="jdbc"/>
     
 </bean>

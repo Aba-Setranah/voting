@@ -12,6 +12,7 @@
         <title>JSP Page</title>
     </head>
     <body>
+        
         <h1>view votes!</h1>
         
         <table border="1">

@@ -65,15 +65,10 @@
                             <li class="nav-item">
                                 <a href="./index2.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Delete</p>
+                                    <p>View Candidates</p>
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a href="./index3.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Update</p>
-                                </a>
-                            </li>
+                            
                         </ul>
                     </li>
                 </ul>
