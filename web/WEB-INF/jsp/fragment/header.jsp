@@ -54,7 +54,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="./index2.html" class="nav-link">
+                                <a href="viewCandidate" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>View Candidate</p>
                                 </a>
@@ -81,13 +81,13 @@
                         </a>
                         <ul class="nav nav-treeview" style="display: none;">
                             <li class="nav-item">
-                                <a href="./index.html" class="nav-link active">
+                                <a href="addCandidate" class="nav-link active">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Add Voter</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="./index2.html" class="nav-link">
+                                <a href="viewCandidate" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>View Voter</p>
                                 </a>
