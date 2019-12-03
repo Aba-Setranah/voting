@@ -3,6 +3,7 @@ package com.controller;
 import com.dao.CandidateDao;
 import com.dao.UserDao;
 import com.dao.VoteDao;
+import com.dao.VoterelectionDao;
 import com.model.Candidate;
 import com.model.Election;
 import com.model.User;
@@ -23,12 +24,21 @@ public class VoterController {
     @Autowired
     UserDao userdao;
 
+    @Autowired
+    VoterelectionDao ved;
+
     @RequestMapping("/addvote")
     public String addVote(Model model, HttpSession s) throws SQLException {
         String userId = s.getAttribute("id").toString();
 //        User user = new User("Dora", "Vondee", "dora", "1234", "voter");
 //        user.setId(1);
+
         User user = userdao.getUserById(Integer.parseInt(userId));
+        Voterelection voterelection = ved.getVoterelectionById(user.getId());
+
+        if (voterelection != null) {
+            return "redirect:/alreadyvoted";
+        }
 
         Election e = new Election("General", 2019);
         e.setId(2);
@@ -52,7 +62,7 @@ public class VoterController {
         Vote vote = new Vote(Integer.parseInt(election), Integer.parseInt(candidate), null);
         VoteDao voteDao = new VoteDao();
         int result = voteDao.addvote(vote);
-        
+
         Voterelection ve = new Voterelection();
         ve.setElectionId(Integer.parseInt(election));
         ve.setVoterId(user);
@@ -61,12 +71,18 @@ public class VoterController {
         System.out.println(election);
         System.out.println(candidate);
         System.out.println(user);
-        return "redirect:/viewvotes";
+        return "redirect:/alreadyvoted";
     }
 
     @RequestMapping("/viewvotes")
     public String viewVotes(Model model) throws SQLException {
         model.addAttribute("votes", new VoteDao().getAllVotes());
         return "viewvotes";
+    }
+
+    @RequestMapping("/alreadyvoted")
+    public String alreadyvoted(Model model) throws SQLException {
+        model.addAttribute("votes", new VoteDao().getAllVotes());
+        return "alreadyvoted";
     }
 }

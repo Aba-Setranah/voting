@@ -11,6 +11,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 
 public class VoterelectionDao {
     
+    
     JdbcTemplate jdbc;
 
     public JdbcTemplate getJdbc() {
@@ -25,7 +26,7 @@ public class VoterelectionDao {
     
     public Voterelection getVoterelectionById(int id)
     {
-       List<Voterelection> k  = jdbc.query("select * from Voterelection where id ="+id+";", new VoterelectionRowmapper());
+       List<Voterelection> k  = jdbc.query("select * from Voterelection where voter_id ="+id+";", new VoterelectionRowmapper());
         try {
             return k.get(0);
         } catch (Exception e) {

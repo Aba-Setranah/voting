@@ -27,4 +27,8 @@
 <bean id="c"   class="com.dao.CandidateDao">
     <property name="connection" ref="jdbc"/>
 </bean>
+
+<bean id="vtr"   class="com.dao.VoterelectionDao">
+    <property name="jdbc" ref="jdbc"/>
+</bean>
 </beans>
