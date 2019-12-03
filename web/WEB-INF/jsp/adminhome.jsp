@@ -64,7 +64,7 @@
                 <div class="col-md-6">
 
                     <!-- Form Element sizes -->
-                    <div class="card card-success">
+                    <div class="card card-primary">
                         <div class="card-header">
                             <h3 class="card-title">Chart</h3>
                         </div>
