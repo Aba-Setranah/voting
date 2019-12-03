@@ -11,15 +11,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class AdminLoginController {
     
-    @RequestMapping("/admin")
-    public String adminlogin()
+    @RequestMapping("/adminhome")
+    public String adminhome()
     {
-        return "adminlogin";
-    }
-    
-    @RequestMapping("/admincheck")
-    public String admincheck()
-    {
-        return"";
+        
+        return "adminhome";
     }
 }

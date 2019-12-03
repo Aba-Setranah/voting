@@ -23,7 +23,6 @@ servlet but should be the only JSP outside of WEB-INF.
     </head>
     <body>
         <h1>Voter Login!</h1>
-        <a href="admin">Admin</a>
         <form action="usercheck" method="post"> 
             <table border="1">
                 <tbody>

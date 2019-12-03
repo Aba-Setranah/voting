@@ -12,7 +12,11 @@ public class UserRowMapper implements RowMapper<User> {
     {
         User login = new User();
         login.setId(rs.getInt(1));
-        login.setPassword(rs.getString(2));
+        login.setFirstname(rs.getString(2));
+        login.setLastname(rs.getString(3));
+        login.setUsername(rs.getString(4));
+        login.setPassword(rs.getString(5));
+        login.setUsertype(rs.getString(6));
         return login;
     }
     

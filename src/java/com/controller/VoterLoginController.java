@@ -30,6 +30,7 @@ public class VoterLoginController {
             //ModelAndView m= new ModelAndView("addvote");
             ModelAndView m = new ModelAndView("addvote");
 
+            User loguser = record.get(0);
             try {
 
                 System.out.println("connection " + d);
@@ -40,7 +41,16 @@ public class VoterLoginController {
                 System.out.println(d2.getMessage());
             }
 
-            return "redirect:/addvote";
+            if (loguser.getUsertype().equals("voter")) {
+                return "redirect:/addvote";
+            }
+            else if(loguser.getUsertype().equals("admin")){
+                return "redirect:/adminhome";
+            }
+            else
+            {
+                return "redirect:/redirect.jsp";
+            }
         } else {
             ModelAndView m = new ModelAndView();
             return "redirect:/redirect.jsp";
