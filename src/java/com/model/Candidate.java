@@ -83,6 +83,10 @@ public class Candidate  implements java.io.Serializable {
         return "Candidate{" + "id=" + id + ", party=" + party + ", name=" + name + ", image=" + image + '}';
     }
 
+    public String getString() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 
 
 

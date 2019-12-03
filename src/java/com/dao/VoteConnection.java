@@ -7,6 +7,8 @@ package com.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import javax.security.auth.login.Configuration;
+import org.hibernate.SessionFactory;
 
 /**
  *
@@ -20,6 +22,7 @@ public class VoteConnection {
             Class.forName("com.mysql.jdbc.Driver");
             System.out.println("#################");
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/evoting","root","");
+            
             return conn;
         } catch (Exception e) {
         }
