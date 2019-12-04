@@ -23,6 +23,8 @@ public class VoterController {
 
     @Autowired
     UserDao userdao;
+    @Autowired
+    CandidateDao candidatedao;
 
     @Autowired
     VoterelectionDao ved;
@@ -41,7 +43,6 @@ public class VoterController {
         Election e = new Election("General", 2019);
         e.setId(2);
 
-        CandidateDao candidatedao = new CandidateDao();
         List<Candidate> candidates = candidatedao.getCandidate();
 
         model.addAttribute("user", user);
