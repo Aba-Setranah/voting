@@ -44,12 +44,9 @@ public class VoterLoginController {
 
             if (loguser.getUsertype().equals("voter")) {
                 return "redirect:/addvote";
-            }
-            else if(loguser.getUsertype().equals("admin")){
+            } else if (loguser.getUsertype().equals("admin")) {
                 return "redirect:/adminhome";
-            }
-            else
-            {
+            } else {
                 return "redirect:/redirect.jsp";
             }
         } else {
@@ -58,5 +55,13 @@ public class VoterLoginController {
             // return "redirect://redirect.jsp";
         }
     }
+    
+    @RequestMapping("/logout")
+    public String logout(HttpSession session){
+        session.invalidate();
+        
+        return "redirect:/redirect.jsp";
+    }
+    
 
 }

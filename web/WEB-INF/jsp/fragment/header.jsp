@@ -59,14 +59,14 @@
                                     <p>View Candidate</p>
                                 </a>
                             </li>
-                            
+
                         </ul>
                     </li>
                 </ul>
             </nav>
             <!-- /.sidebar-menu -->
-            
-                        <!-- Sidebar Menu Voters -->
+
+            <!-- Sidebar Menu Voters -->
             <nav class="mt-2">
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                     <!-- Add icons to the links using the .nav-icon class
@@ -92,14 +92,14 @@
                                     <p>View Voter</p>
                                 </a>
                             </li>
-                            
+
                         </ul>
                     </li>
                 </ul>
             </nav>
             <!-- /.sidebar-voter menu -->
-            
-                       <!-- Sidebar Menu Voters -->
+
+            <!-- Sidebar Menu Voters -->
             <nav class="mt-2">
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                     <!-- Add icons to the links using the .nav-icon class
@@ -124,6 +124,24 @@
                 </ul>
             </nav>
             <!-- /.sidebar-voter menu -->
+
+            <!-- Sidebar Logout -->
+            <nav class="mt-2">
+                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                    <!-- Add icons to the links using the .nav-icon class
+                         with font-awesome or any other icon font library -->
+                    <li class="nav-item has-treeview">
+                        <a href="logout" class="nav-link active">
+                            <i class="nav-icon fas fa-tachometer-alt"></i>
+                            <p>
+                                Logout
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- /.Sidebar Logout -->
         </div>
         <!-- /.sidebar -->
     </aside>
