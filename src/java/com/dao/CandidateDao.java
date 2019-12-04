@@ -77,17 +77,13 @@ public class CandidateDao {
             }
         });
     }
-    
+
     public Party getPartyById(int id) {
-        List<Party> k  = connection.query("select * from party where id ="+id+";", new PartyRowmapper());
+        List<Party> k = connection.query("select * from party where id =" + id + ";", new PartyRowmapper());
         try {
             return k.get(0);
         } catch (Exception e) {
             return null;
         }
-
-                return ca;
-            }
-        });
     }
 }
