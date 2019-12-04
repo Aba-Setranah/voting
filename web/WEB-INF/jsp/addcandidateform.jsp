@@ -20,7 +20,7 @@
                 <tbody>
                     <tr>
                         <td>Name</td>
-                        <td><input type="text" class="form-control" name="name"/></td>
+                        <td><input type="text" class="form-control" name="name" required=""/></td>
                     </tr>
                     <tr>
                         <td>Party_id</td>
