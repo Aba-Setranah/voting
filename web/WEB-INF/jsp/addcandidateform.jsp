@@ -24,7 +24,14 @@
                     </tr>
                     <tr>
                         <td>Party_id</td>
-                        <td><input type="text" class="form-control" name="party" required=""/></td>
+                        <td>
+                        <select class="form-control" name="party">
+                                <c:forEach var="p" items="${party}">
+                                    <option value="${p.id}">${p.name}</option>
+                                </c:forEach>
+                            </select>
+                        </td>    
+                        <!--<td><input type="text" class="form-control" name="party"/></td>-->
                     </tr>
                     <tr>
                         <td colspan="2"><input type="submit" class="btn btn-success" value="ADD"></td>

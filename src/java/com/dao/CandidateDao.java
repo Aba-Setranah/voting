@@ -6,6 +6,7 @@
 package com.dao;
 
 import com.model.Candidate;
+import com.model.Party;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -14,6 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.security.auth.login.Configuration;
 import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 
@@ -45,6 +47,7 @@ public class CandidateDao {
 
             candidate.setId(rs.getInt("id"));
             candidate.setName(rs.getString("name"));
+            candidate.setParty(getPartyById(rs.getInt("party_id")));
             candidates.add(candidate);
             System.out.println("name=" + rs.getString("name"));
         }
@@ -69,9 +72,18 @@ public class CandidateDao {
                 Candidate ca = new Candidate();
                 ca.setId(rs.getInt(1));
                 ca.setName(rs.getString(2));
-
+                ca.setParty(getPartyById(rs.getInt(3)));
                 return ca;
             }
         });
+    }
+
+    public Party getPartyById(int id) {
+        List<Party> k = connection.query("select * from party where id =" + id + ";", new PartyRowmapper());
+        try {
+            return k.get(0);
+        } catch (Exception e) {
+            return null;
+        }
     }
 }

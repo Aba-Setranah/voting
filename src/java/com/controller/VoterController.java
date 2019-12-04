@@ -23,6 +23,8 @@ public class VoterController {
 
     @Autowired
     UserDao userdao;
+    @Autowired
+    CandidateDao candidatedao;
 
     @Autowired
     VoterelectionDao ved;
@@ -30,8 +32,6 @@ public class VoterController {
     @RequestMapping("/addvote")
     public String addVote(Model model, HttpSession s) throws SQLException {
         String userId = s.getAttribute("id").toString();
-//        User user = new User("Dora", "Vondee", "dora", "1234", "voter");
-//        user.setId(1);
 
         User user = userdao.getUserById(Integer.parseInt(userId));
         Voterelection voterelection = ved.getVoterelectionById(user.getId());
@@ -43,7 +43,6 @@ public class VoterController {
         Election e = new Election("General", 2019);
         e.setId(2);
 
-        CandidateDao candidatedao = new CandidateDao();
         List<Candidate> candidates = candidatedao.getCandidate();
 
         model.addAttribute("user", user);
