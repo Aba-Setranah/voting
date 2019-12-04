@@ -6,7 +6,9 @@
 package com.controller;
 
 import com.dao.CandidateDao;
+import com.dao.PartyDao;
 import com.model.Candidate;
+import com.model.Party;
 import java.sql.SQLException;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,8 +23,15 @@ public class CandidateController {
     @Autowired
     CandidateDao c;
     
+    
     @RequestMapping("/addCandidate")
-    public String addCandidate(Model m){
+    public String addCandidate(Model m) throws SQLException{
+       
+        PartyDao partydao = new PartyDao();
+        List<Party> parties = partydao.getParty();
+        
+        m.addAttribute("party", parties);
+        
         m.addAttribute("command", new Candidate());
         return "addcandidateform";
     }

@@ -27,12 +27,13 @@
                     <tr>
                         <th>Id</th>
                         <th>name</th>
-
+                        <th>Party</th>
                     </tr>
                     <c:forEach var="ca" items="${list}">
                         <tr>
                             <td>${ca.id}</td>
                             <td>${ca.name}</td>
+                            <td>${ca.party.name}</td>
 
                         </tr>
                     </c:forEach>
