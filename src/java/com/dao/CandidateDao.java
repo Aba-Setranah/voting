@@ -38,7 +38,6 @@ public class CandidateDao {
     public List<Candidate> getCandidate() throws SQLException {
         List<Candidate> candidates = new ArrayList<>();
         Connection c = new VoteConnection().getConnection();
-        System.out.println("11111111111111111");
         PreparedStatement ps = c.prepareStatement("SELECT * FROM candidate");
 
         ResultSet rs = ps.executeQuery();
@@ -61,7 +60,7 @@ public class CandidateDao {
 
     public int save(Candidate ca) {
         byte[] b = "".getBytes();
-        String sql = "insert into candidate(name,party_id,image) values('" + ca.getName() + "'," + 1 + ",'" + b + "')";
+        String sql = "insert into candidate(name,party_id,image) values('" + ca.getName() + "'," + ca.getParty().getName() + ",'" + b + "')";
         return connection.update(sql);
     }
 
