@@ -14,6 +14,9 @@
 
         <!-- Right navbar links -->
         <ul class="navbar-nav ml-auto">
+            <li class="nav-item ">
+                <a href="logout" class="dropdown-item dropdown-footer">Logout</a>
+            </li>
 
         </ul>
     </nav>
@@ -30,10 +33,15 @@
             <span class="brand-text font-weight-light">Voter Page</span>
         </a>
 
+
         <!-- Sidebar -->
         <div class="sidebar">
 
-            
+            <!-- Sidebar Logout -->
+
+            <!-- /.Sidebar Logout -->
+
+
         </div>
         <!-- /.sidebar -->
     </aside>

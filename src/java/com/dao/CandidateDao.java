@@ -61,7 +61,7 @@ public class CandidateDao {
 
     public int save(Candidate ca) {
         byte[] b = "".getBytes();
-        String sql = "insert into candidate(name,party_id,image) values('" + ca.getName() + "'," + ca.getParty().getName() + ",'" + b + "')";
+        String sql = "insert into candidate(name,party_id,image) values('" + ca.getName() + "'," + 1 + ",'" + b + "')";
         return connection.update(sql);
     }
 
@@ -85,5 +85,9 @@ public class CandidateDao {
         } catch (Exception e) {
             return null;
         }
+
+                return ca;
+            }
+        });
     }
 }

@@ -14,7 +14,9 @@
 
         <!-- Right navbar links -->
         <ul class="navbar-nav ml-auto">
-
+            <li class="nav-item ">
+                    <a href="logout" class="dropdown-item dropdown-footer">Logout</a>
+            </li>
         </ul>
     </nav>
     <!-- /.navbar -->
@@ -59,14 +61,14 @@
                                     <p>View Candidate</p>
                                 </a>
                             </li>
-                            
+
                         </ul>
                     </li>
                 </ul>
             </nav>
             <!-- /.sidebar-menu -->
-            
-                        <!-- Sidebar Menu Voters -->
+
+            <!-- Sidebar Menu Voters -->
             <nav class="mt-2">
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                     <!-- Add icons to the links using the .nav-icon class
@@ -81,25 +83,25 @@
                         </a>
                         <ul class="nav nav-treeview" style="display: none;">
                             <li class="nav-item">
-                                <a href="addCandidate" class="nav-link active">
+                                <a href="addUser" class="nav-link active">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Add Voter</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="viewCandidate" class="nav-link">
+                                <a href="viewUser" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>View Voter</p>
                                 </a>
                             </li>
-                            
+
                         </ul>
                     </li>
                 </ul>
             </nav>
             <!-- /.sidebar-voter menu -->
-            
-                       <!-- Sidebar Menu Voters -->
+
+            <!-- Sidebar Menu Voters -->
             <nav class="mt-2">
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                     <!-- Add icons to the links using the .nav-icon class
@@ -124,6 +126,9 @@
                 </ul>
             </nav>
             <!-- /.sidebar-voter menu -->
+
+            <!-- Sidebar Logout -->
+            <!-- /.Sidebar Logout -->
         </div>
         <!-- /.sidebar -->
     </aside>
