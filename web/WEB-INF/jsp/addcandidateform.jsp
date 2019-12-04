@@ -31,7 +31,7 @@
                     </tr>
                 </tbody>
             </table>
-            
+
         </form>
         <%@include file="fragment/footer.jsp" %>
     </body>
