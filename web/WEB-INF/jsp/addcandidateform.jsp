@@ -20,11 +20,11 @@
                 <tbody>
                     <tr>
                         <td>Name</td>
-                        <td><input type="text" class="form-control" name="name"/></td>
+                        <td><input type="text" class="form-control" name="name" required=""/></td>
                     </tr>
                     <tr>
                         <td>Party_id</td>
-                        <td><input type="text" class="form-control" name="party"/></td>
+                        <td><input type="text" class="form-control" name="party" required=""/></td>
                     </tr>
                     <tr>
                         <td colspan="2"><input type="submit" class="btn btn-success" value="ADD"></td>

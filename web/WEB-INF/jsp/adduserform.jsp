@@ -21,23 +21,23 @@
                 <tbody>
                     <tr>
                         <td>First Name</td>
-                        <td><input type="text" class="form-control" name="firstname"/></td>
+                        <td><input type="text" class="form-control" name="firstname" required=""/></td>
                     </tr>
                     <tr>
                         <td>Last Name</td>
-                        <td><input type="text" class="form-control" name="lastname"/></td>
+                        <td><input type="text" class="form-control" name="lastname" required=""/></td>
                     </tr>
                     <tr>
                         <td>User Name</td>
-                        <td><input type="text" class="form-control" name="username"/></td>
+                        <td><input type="text" class="form-control" name="username" required=""/></td>
                     </tr>
                     <tr>
                         <td>Password</td>
-                        <td><input type="text" class="form-control" name="password"/></td>
+                        <td><input type="text" class="form-control" name="password" required=""/></td>
                     </tr>
                     <tr>
                         <td>User type</td>
-                        <td><select name="usertype">
+                        <td><select name="usertype" required="">
                                 <option></option>
                                 <option value="voter"> voter</option>
                                 <option value="admin">admin</option>

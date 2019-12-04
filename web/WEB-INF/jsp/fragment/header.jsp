@@ -15,7 +15,7 @@
         <!-- Right navbar links -->
         <ul class="navbar-nav ml-auto">
             <li class="nav-item ">
-                    <a href="logout" class="dropdown-item dropdown-footer">Logout</a>
+                  <a type="button" href="logout" class="dropdown-item dropdown-footer">Logout</a> 
             </li>
         </ul>
     </nav>
